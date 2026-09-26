@@ -458,7 +458,157 @@
 
         </section>
 
+        <!-- =========================
+             TELL ME ABOUT IT
+        ========================== -->
+        <section class="tell-section" id="tell-me">
 
+            <div class="container">
+
+                <div class="tell-box">
+
+                    <div class="tell-intro">
+
+                        <p class="eyebrow">
+                            TELL ME ABOUT IT
+                        </p>
+
+                        <h2>
+                            Sometimes you just need
+                            <br>
+                            <em>somewhere to put it.</em>
+                        </h2>
+
+                        <p>
+                            Share what's on your mind.
+                            It stays between you and me —
+                            no public comments, no audience.
+                        </p>
+
+                        <span class="tell-note">
+                            ✦ You can stay anonymous.
+                        </span>
+
+                    </div>
+
+
+                    <form id="story-form" class="story-form">
+
+                        <div class="form-group">
+
+                            <label for="story-topic">
+                                What do you want to talk about?
+                            </label>
+
+                            <select id="story-topic" required>
+
+                                <option value="" disabled selected>
+                                    Choose a topic
+                                </option>
+
+                                <option value="Relationships">
+                                    Relationships
+                                </option>
+
+                                <option value="Career">
+                                    Career
+                                </option>
+
+                                <option value="Money">
+                                    Money
+                                </option>
+
+                                <option value="Wellness">
+                                    Wellness
+                                </option>
+
+                                <option value="Family">
+                                    Family
+                                </option>
+
+                                <option value="Adulting">
+                                    Adulting
+                                </option>
+
+                                <option value="Just life">
+                                    Just life
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="story-message">
+                                Your story
+                            </label>
+
+                            <textarea
+                                id="story-message"
+                                rows="7"
+                                placeholder="Write whatever's on your mind..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="story-name">
+                                Nickname
+                                <span>(optional)</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="story-name"
+                                placeholder="What should I call you?"
+                                maxlength="80"
+                            >
+
+                        </div>
+
+
+                        <label class="anonymous-option">
+
+                            <input
+                                type="checkbox"
+                                id="story-anonymous"
+                                checked
+                            >
+
+                            <span>
+                                I'd like to stay anonymous.
+                            </span>
+
+                        </label>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button story-submit"
+                        >
+                            Leave it here
+                            <span>→</span>
+                        </button>
+
+
+                        <p
+                            id="story-status"
+                            class="story-status"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
         <!-- =========================
              ABOUT
         ========================== -->
@@ -549,7 +699,8 @@
     </footer>
 
 
-    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js.js"></script>
 
 </body>

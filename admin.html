@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Life in Progress — Private Inbox</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- ==============================
+         LOGIN
+    =============================== -->
+    <section id="loginScreen" class="login-screen">
+
+        <div class="login-card">
+
+            <div class="login-icon">🌱</div>
+
+            <h1>Life in Progress</h1>
+
+            <p class="login-subtitle">
+                Private Admin Inbox
+            </p>
+
+            <form id="loginForm">
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Admin email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Sign In
+                </button>
+
+                <p id="loginError" class="error-message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ADMIN DASHBOARD
+    =============================== -->
+    <section id="adminDashboard" class="admin-dashboard hidden">
+
+        <header class="admin-header">
+
+            <div>
+                <p class="eyebrow">LIFE IN PROGRESS</p>
+
+                <h1>Private Inbox</h1>
+
+                <p>
+                    Visitor stories and conversations
+                </p>
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Log out
+            </button>
+
+        </header>
+
+
+        <!-- ==============================
+             FILTERS
+        =============================== -->
+        <nav class="filters">
+
+            <button class="filter-button active" data-topic="all">
+                All
+            </button>
+
+            <button class="filter-button" data-topic="Relationships">
+                Relationships
+            </button>
+
+            <button class="filter-button" data-topic="Career">
+                Career
+            </button>
+
+            <button class="filter-button" data-topic="Money">
+                Money
+            </button>
+
+            <button class="filter-button" data-topic="Life">
+                Life
+            </button>
+
+        </nav>
+
+
+        <!-- ==============================
+             MAIN CONTENT
+        =============================== -->
+        <main class="inbox-layout">
+
+            <!-- Conversation List -->
+            <div class="conversation-section">
+
+                <div class="section-heading">
+                    <h2>Conversations</h2>
+
+                    <span id="conversationCount">
+                        0
+                    </span>
+                </div>
+
+                <div id="conversationList">
+
+                    <div class="empty-state">
+                        Loading conversations...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Conversation Details -->
+            <aside
+                id="conversationView"
+                class="conversation-view"
+            >
+
+                <div class="empty-view">
+
+                    <div class="empty-icon">
+                        💌
+                    </div>
+
+                    <h2>Select a conversation</h2>
+
+                    <p>
+                        Choose a message from your inbox
+                        to read it here.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+    </section>
+
+
+    <!-- Admin JavaScript -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

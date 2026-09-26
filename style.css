@@ -1153,3 +1153,169 @@ p {
         font-size: 0.8rem;
     }
 }
+
+/* =========================================
+   TELL ME ABOUT IT
+========================================= */
+
+.tell-section {
+    padding: 120px 0;
+}
+
+.tell-box {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    padding: 70px;
+    background: var(--green-light);
+    border-radius: 4px;
+}
+
+.tell-intro {
+    max-width: 430px;
+}
+
+.tell-intro h2 {
+    margin: 18px 0 24px;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1.05;
+}
+
+.tell-intro h2 em {
+    font-weight: 400;
+}
+
+.tell-intro > p:not(.eyebrow) {
+    color: var(--green-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 390px;
+}
+
+.tell-note {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--green-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.story-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    color: var(--green-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.form-group label span {
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 17px;
+    border: 1px solid rgba(67, 85, 69, 0.22);
+    border-radius: 2px;
+    background: rgba(255, 253, 248, 0.8);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green-dark);
+    background: var(--paper);
+}
+
+.anonymous-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green-dark);
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.anonymous-option input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green-dark);
+}
+
+.story-submit {
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+}
+
+.story-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.story-status {
+    min-height: 24px;
+    margin: 0;
+    color: var(--green-dark);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.story-status.error {
+    color: #8a4f4f;
+}
+
+
+/* =========================================
+   TELL ME ABOUT IT — RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .tell-section {
+        padding: 80px 0;
+    }
+
+    .tell-box {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 40px 28px;
+    }
+
+    .tell-intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .story-submit {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
